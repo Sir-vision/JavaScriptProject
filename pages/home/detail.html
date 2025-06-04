@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Housing Details</title>
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body>
+    <article class="page-container">
+        <div class="details-container">
+            <section class="listing-description">
+                <h2 id="detailName" class="listing-heading"></h2>
+                <p id="detailLocation" class="listing-location"></p>
+            </section>
+
+            <section class="listing-features">
+                <h2 class="section-heading">About this housing location</h2>
+                <ul>
+                    <li id="units"></li>
+                    <li id="wifi"></li>
+                    <li id="laundry"></li>
+                </ul>
+            </section>
+
+            <section class="listing-apply">
+                <h2 class="section-heading">Apply now to live here</h2>
+                <form id="applyForm">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" name="firstName" required>
+
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" name="lastName" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required>
+
+                    <button type="submit" class="primary">Apply now</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="image-container">
+            <img id="detailPhoto" class="listing-photo" alt="Housing photo" />
+        </div>
+    </article>
+
+    <script src="detail.js"></script>
+</body>
+</html>
