@@ -1,43 +1,52 @@
-# 🌐 Personal Portfolio Website
+# 🏠 Housing Location App
 
-A simple and responsive personal portfolio website built with **HTML**, **CSS**, and **JavaScript**. It showcases my work, provides information about me, and includes a contact form for collaboration or freelance inquiries.
+A simple front-end project for browsing and viewing affordable housing locations. Built using HTML, CSS, and plain JavaScript, this project dynamically loads housing data from a local JSON file (`db.json`) and allows users to view listings and see detailed pages.
+
+---
+
+## 📁 Project Structure
+
+project-root/
+├── index.html # Entry point (optional landing page)
+├── db.json # Housing data source
+├── script.js # JavaScript logic for homepage
+├── assets/ # Images for housing listings
+├── style.css # Global styles (optional)
+└── pages/
+└── home/
+├── home.html # Listing page (shows housing cards)
+├── home.css # Styles for listing page
+├── detail.html # Detail view for each listing
+├── detail.css # Styles for detail view
+└── detail.js # Logic to render a single listing
+
+
+---
 
 ## 🚀 Features
 
-- 🧑‍💼 About Me page
-- 💼 Dynamic Projects page (cards rendered with JavaScript)
-- 📬 Contact form with basic validation
-- 🌗 Light/Dark Theme Toggle (with local storage persistence)
-- 📱 Responsive design for mobile and desktop
+- ✅ Loads housing data from `db.json`
+- ✅ Displays a grid of housing locations
+- ✅ Allows basic filtering by city name
+- ✅ Click **"Learn More"** to view listing details
+- ✅ Detail page includes name, location, available units, amenities (Wi-Fi, laundry)
 
-## 📁 Project Structure
-portfolio/
-├── index.html # Homepage
-├── about.html # About Me
-├── projects.html # Dynamic Projects
-├── contact.html # Contact Form
-├── styles.css # Styling and themes
-├── script.js # Theme switcher and dynamic rendering
-├── projects-data.js # Project data source (array of objects)
-└── README.md # Project documentation
+---
 
+## 🔧 How to Run Locally
 
-## 🛠 Tech Stack
+> ❗ Browsers block `fetch()` from the filesystem, so you must use a local server.
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
+### Option 1: VS Code + Live Server
 
-## 🔧 Customization
+1. Open the project in Visual Studio Code.
+2. Install the **Live Server** extension.
+3. Right-click on `pages/home/home.html` → `Open with Live Server`.
 
-To add or update your projects:
+### Option 2: Use Node's http-server
 
-1. Open `projects-data.js`
-2. Add a new object to the array:
+Make sure you have Node.js installed, then:
 
-```js
-{
-  title: "My Awesome Project",
-  description: "A short description of what it does.",
-  link: "https://example.com/my-awesome-project"
-}
+```bash
+npx http-server .
+
